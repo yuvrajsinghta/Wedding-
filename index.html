@@ -1015,4 +1015,214 @@ addEventListener('resize',pw);
 var gw=setInterval(function(){var g=d.getElementById('gate');if(g&&g.style.display!=='none')return;clearInterval(gw);setTimeout(watch,800);setTimeout(watch,3500)},300);
 })();
 </script>
+<!--
+=====================================================================
+  KULDEEP & SWETHA — ADD-ON CODE  (Story + Couple Photo + Gallery + Diya)
+
+  KAISE LAGANA HAI:
+  1. Is poori file ka code (ye comment chhod ke) copy karo.
+  2. Apni Kuldeep-Swetha-Wedding.html me sabse neeche, last </body> se
+     THIK PEHLE paste kar do.  Bas, aur kahin kuch nahi.
+  3. Code khud sections ko sahi jagah laga deta hai:
+        Royal Couple -> [Our Love Story] -> Family -> Festivities
+        -> [Gallery + Couple photo + Diya garland] -> Venue
+  4. Photos / text badalne ke liye sirf neeche "CONFIG" wala hissa edit karo.
+=====================================================================
+-->
+
+<style>
+.ad-sec{--g1:#f6d98b;--g2:#dea645;--g3:#b9822a;--g4:#8d5a17;--cr:#9e141e;position:relative;max-width:72rem;margin:0 auto;padding:4rem 1rem;text-align:center}
+@media(min-width:768px){.ad-sec{padding:7rem 1.5rem}}
+.ad-kick{margin:0;font:2rem/1.1 var(--font-great-vibes);color:#b16f23}
+.ad-h{margin:.4rem 0 0;font:700 clamp(1.9rem,6vw,3.6rem)/1.1 var(--font-cinzel-decorative);color:var(--cr)}
+.ad-orn{display:flex;align-items:center;justify-content:center;gap:.75rem;margin:1rem 0 2.5rem;color:var(--g2);font-size:1.25rem}
+.ad-orn:before,.ad-orn:after{content:"";width:4rem;height:1px;background:var(--g2)}
+
+/* ---- diya ---- */
+.ad-diya svg{display:block;width:100%;height:auto;overflow:visible;position:relative}
+.ad-b{fill:#b9822a}.ad-r{fill:none;stroke:#f6d98b;stroke-width:2.5}
+.ad-f1,.ad-f2{transform-origin:24px 27px;transform:scale(0)}
+.ad-f1{fill:#ffb02e}.ad-f2{fill:#fff3c4}
+.ad-diya{position:relative}
+.ad-lit:before,.ad-on:before{content:"";position:absolute;left:5%;top:-15%;width:90%;height:85%;border-radius:50%;background:radial-gradient(circle,rgba(255,176,46,.55),transparent 68%);pointer-events:none}
+.ad-lit .ad-f1,.ad-lit .ad-f2,.ad-on .ad-f1,.ad-on .ad-f2{animation:adLight .7s ease-out forwards,adFlick 1.8s ease-in-out .7s infinite}
+.ad-on .ad-f2{animation-delay:0s,.9s}
+@keyframes adLight{to{transform:scale(1)}}
+@keyframes adFlick{0%,100%{transform:scale(1,1) rotate(0)}30%{transform:scale(.92,1.09) rotate(-2.5deg)}62%{transform:scale(1.06,.95) rotate(2.5deg)}}
+
+/* ---- love story ---- */
+.ad-story{position:relative;max-width:38rem;margin:0 auto;padding-left:3.5rem;text-align:left}
+.ad-node:not(:last-child):after{content:"";position:absolute;left:-2.35rem;top:2.8rem;bottom:.3rem;width:2px;background:linear-gradient(var(--g2),rgba(222,166,69,.25))}
+.ad-node{position:relative;padding-bottom:2.6rem}
+.ad-node .ad-diya{position:absolute;left:-3.5rem;top:-.15rem;width:2.4rem}
+.ad-yr{font:2.5rem/1 var(--font-great-vibes);color:#b16f23}
+.ad-nt{margin:.35rem 0 .45rem;font:700 1.05rem/1.3 var(--font-cinzel-decorative);color:var(--cr)}
+.ad-tx{margin:0;font:italic 1.2rem/1.55 var(--font-cormorant);color:#5f3b2f}
+
+/* ---- couple arch ---- */
+.ad-arch{width:min(78vw,340px);aspect-ratio:4/5;margin:0 auto 1.2rem;padding:9px;border-radius:999px 999px 16px 16px/46% 46% 16px 16px;background:linear-gradient(145deg,var(--g1),var(--g3) 30%,#fff1bd 50%,var(--g4) 75%,var(--g1));box-shadow:0 16px 30px rgba(60,20,0,.38),0 0 0 1px #6b4310,inset 0 0 0 2px #fff3c4}
+.ad-arch>div{height:100%;padding:6px;border-radius:inherit;background:linear-gradient(180deg,#b3202c,var(--cr) 60%,#6e0b14)}
+.ad-arch img,.ad-arch .ad-ph{width:100%;height:100%;display:block;object-fit:cover;border-radius:999px 999px 10px 10px/46% 46% 10px 10px}
+.ad-arch .ad-ph{display:grid}
+.ad-names{margin:0 0 3rem;font:clamp(2.2rem,8vw,3.2rem)/1.1 var(--font-great-vibes);color:var(--cr)}
+
+/* ---- gallery ---- */
+.ad-grid{columns:2;column-gap:10px;max-width:60rem;margin:0 auto}
+@media(min-width:768px){.ad-grid{columns:3;column-gap:14px}}
+.ad-it{display:block;width:100%;margin:0 0 10px;padding:5px;border:0;border-radius:6px;break-inside:avoid;background:linear-gradient(145deg,var(--g1),var(--g3) 40%,#fff1bd 55%,var(--g4));box-shadow:0 8px 18px rgba(60,20,0,.25);cursor:zoom-in}
+@media(min-width:768px){.ad-it{margin-bottom:14px}}
+.ad-it img{display:block;width:100%;height:auto;border-radius:3px}
+.ad-it:focus-visible{outline:3px solid var(--cr);outline-offset:2px}
+.ad-ph{aspect-ratio:var(--r);display:grid;place-items:center;background:linear-gradient(160deg,#fff6d0,#f6d98b);color:var(--g4);font:italic 1.15rem var(--font-cormorant)}
+.ad-it .ad-ph{border-radius:3px}
+.ad-garland{display:flex;justify-content:center;gap:clamp(.8rem,4vw,2rem);margin-top:3.5rem}
+.ad-garland .ad-diya{width:clamp(2rem,9vw,3rem)}
+.ad-garland .ad-diya:nth-child(even){margin-top:.9rem}
+
+/* ---- lightbox ---- */
+.ad-lb{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:rgba(40,5,10,.94)}
+.ad-lb[hidden]{display:none}
+.ad-lb img{max-width:90vw;max-height:84vh;border:4px solid var(--g2,#dea645);border-radius:6px;box-shadow:0 0 40px rgba(246,210,122,.35)}
+.ad-lb button{position:absolute;width:3rem;height:3rem;border:0;border-radius:50%;background:#f6d98b;color:#6e0b14;font:1.8rem/1 serif;cursor:pointer}
+.ad-lb .ad-x{top:max(1rem,env(safe-area-inset-top));right:1rem}
+.ad-lb .ad-p{left:.6rem;top:50%}.ad-lb .ad-n{right:.6rem;top:50%}
+
+/* ---- glow on existing event-timeline dots (compositor-only) ---- */
+[class*="ring-[#ffe4b3]"]{position:relative}
+[class*="ring-[#ffe4b3]"]:after{content:"";position:absolute;inset:-9px;border-radius:50%;background:radial-gradient(circle,rgba(255,176,46,.85),transparent 70%);opacity:.15;animation:adGlow 2.8s ease-in-out infinite}
+@keyframes adGlow{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.9;transform:scale(1.15)}}
+
+/* ---- performance: pause CSS animations in sections that are off-screen ---- */
+.ad-off,.ad-off *,.ad-off :before,.ad-off :after{animation-play-state:paused!important}
+.ad-sec{content-visibility:auto;contain-intrinsic-size:auto 900px}
+
+/* ---- lite mode (auto-enabled on slow phones) ---- */
+.ad-lite *{filter:none!important;backdrop-filter:none!important;box-shadow:none!important;text-shadow:none!important}
+.ad-lite .ad-f1,.ad-lite .ad-f2{transform:none!important;animation:none!important}
+.ad-lite main>.fixed.z-40{display:none!important}
+
+@media(prefers-reduced-motion:reduce){
+ .ad-f1,.ad-f2{animation:none!important;transform:none!important}
+ [class*="ring-[#ffe4b3]"]:after{animation:none}
+}
+</style>
+
+<script>
+(function(){
+/* =========================== CONFIG ===========================
+   Yahin se photos aur text badalna hai.
+   src: image ka link ya base64 (khali '' = placeholder dikhega)  */
+var CONFIG={
+  couple:{src:'',alt:'Kuldeep and Swetha'},      // arch wali couple photo
+  gallery:[                                       // jitni chahe photos add/hata lo
+    {src:'',alt:'Kuldeep and Swetha'},
+    {src:'',alt:'Kuldeep and Swetha'},
+    {src:'',alt:'Kuldeep and Swetha'},
+    {src:'',alt:'Kuldeep and Swetha'},
+    {src:'',alt:'Kuldeep and Swetha'},
+    {src:'',alt:'Kuldeep and Swetha'}
+  ],
+  story:[
+    {year:'20XX',title:'The first hello',text:'It began with a simple hello, and neither of us knew it would become our favourite story.'},
+    {year:'20XX',title:'Friends first',text:'Long conversations, easy silences, and the quiet certainty that home had become a person.'},
+    {year:'20XX',title:'Two families, one yes',text:'Our families met, gave their blessings, and turned a promise into a plan.'},
+    {year:'14 Feb 2027',title:'Forever begins',text:'Surrounded by everyone we love, we take our seven steps together.'}
+  ]
+};
+/* ============================================================= */
+
+function diya(){return '<svg viewBox="0 0 48 48" aria-hidden="true"><path class="ad-f1" d="M24 4c4.5 6.5 7.5 10 7.5 15a7.5 7.5 0 0 1-15 0c0-5 3-8.5 7.5-15z"/><path class="ad-f2" d="M24 12c2.2 3.2 3.8 5 3.8 7.5a3.8 3.8 0 0 1-7.6 0c0-2.5 1.6-4.3 3.8-7.5z"/><path class="ad-b" d="M4 27h40c0 9-8.5 15-20 15S4 36 4 27z"/><path class="ad-r" d="M4 27h40"/></svg>'}
+function head(k,h){return '<p class="ad-kick">'+k+'</p><h2 class="ad-h">'+h+'</h2><div class="ad-orn" aria-hidden="true">❖</div>'}
+var RAT=['4/5','1/1','3/4','5/4','4/5','1/1'];
+function find(k){var s=document.querySelectorAll('main section');for(var i=0;i<s.length;i++)if(s[i].textContent.replace(/\s+/g,'').indexOf(k)>-1)return s[i]}
+function slot(s){var w=s&&s.parentElement;return w&&w.tagName==='DIV'&&w.children.length===1?w:s}
+var main=document.querySelector('main')||document.body;
+
+/* ---- Our Love Story ---- */
+var st=document.createElement('section');st.className='ad-sec';st.setAttribute('data-addon','story');
+st.innerHTML=head('How it all began','Our Love Story')+'<div class="ad-story">'+CONFIG.story.map(function(s){
+  return '<div class="ad-node"><span class="ad-diya">'+diya()+'</span><div class="ad-yr">'+s.year+'</div><h3 class="ad-nt">'+s.title+'</h3><p class="ad-tx">'+s.text+'</p></div>'}).join('')+'</div>';
+var fam=slot(document.getElementById('family'));
+if(fam)fam.before(st);else main.appendChild(st);
+
+/* ---- Couple photo + Gallery + diya garland ---- */
+var real=CONFIG.gallery.filter(function(g){return g.src});
+var gs=document.createElement('section');gs.className='ad-sec';gs.setAttribute('data-addon','gallery');
+var cp=CONFIG.couple;
+gs.innerHTML=head('Moments we treasure','Our Gallery')
+ +'<div class="ad-arch"><div>'+(cp.src?'<img src="'+cp.src+'" alt="'+cp.alt+'" loading="lazy">':'<div class="ad-ph" style="--r:4/5">Couple photo</div>')+'</div></div>'
+ +'<p class="ad-names">Kuldeep &amp; Swetha</p>'
+ +'<div class="ad-grid">'+CONFIG.gallery.map(function(g,i){
+    return '<button class="ad-it" type="button" data-i="'+(g.src?real.indexOf(g):-1)+'" aria-label="Open photo '+(i+1)+'">'
+      +(g.src?'<img src="'+g.src+'" alt="'+g.alt+'" loading="lazy">':'<div class="ad-ph" style="--r:'+RAT[i%RAT.length]+'">Photo '+(i+1)+'</div>')+'</button>'}).join('')+'</div>'
+ +'<div class="ad-garland" aria-hidden="true">'+[0,1,2,3,4].map(function(){return '<span class="ad-diya ad-on">'+diya()+'</span>'}).join('')+'</div>';
+var ven=slot(find('Whereheartsunite'));
+if(ven)ven.before(gs);else main.appendChild(gs);
+
+/* ---- Lightbox ---- */
+var lb=document.createElement('div');lb.className='ad-lb';lb.hidden=true;lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Photo viewer');
+lb.innerHTML='<button class="ad-x" aria-label="Close">×</button><button class="ad-p" aria-label="Previous photo">‹</button><img alt=""><button class="ad-n" aria-label="Next photo">›</button>';
+document.body.appendChild(lb);
+var cur=0,lim=lb.querySelector('img'),opener=null;
+function show(i){cur=(i+real.length)%real.length;lim.src=real[cur].src;lim.alt=real[cur].alt}
+function close(){lb.hidden=true;if(opener)opener.focus()}
+gs.querySelector('.ad-grid').addEventListener('click',function(e){var b=e.target.closest('.ad-it');if(!b||b.dataset.i<0)return;opener=b;show(+b.dataset.i);lb.hidden=false;lb.querySelector('.ad-x').focus()});
+lb.addEventListener('click',function(e){var c=e.target;if(c===lb||c.classList.contains('ad-x'))close();else if(c.classList.contains('ad-p'))show(cur-1);else if(c.classList.contains('ad-n'))show(cur+1)});
+document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+
+/* ---- light the story diyas one by one as they scroll into view ---- */
+var nodes=st.querySelectorAll('.ad-node');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('ad-lit');io.unobserve(x.target)}})},{threshold:.6});
+  nodes.forEach(function(n){io.observe(n)});
+}else nodes.forEach(function(n){n.classList.add('ad-lit')});
+
+/* ============ PERFORMANCE PATCH (smooth scrolling) ============ */
+/* a) pause CSS animations of sections that are off-screen */
+if('IntersectionObserver' in window){
+  var po=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('ad-off',!e.isIntersecting)})},{rootMargin:'120px 0px'});
+  document.querySelectorAll('main section').forEach(function(s){po.observe(s)});
+}
+/* b) lighter petals: half the petals, no 3D flip, opacity on each petal instead of the whole layer */
+var tries=0,pt=setInterval(function(){
+  var box=document.querySelector('main > .fixed.z-40');
+  if(!box||++tries>100){clearInterval(pt);return}
+  var first=box.firstElementChild&&box.firstElementChild.firstElementChild;
+  if(!first||!first.getAnimations().length)return;          /* wait until the original script has started them */
+  clearInterval(pt);
+  box.style.opacity='1';
+  [].slice.call(box.children).forEach(function(p,i){
+    if(i%2){p.remove();return}
+    p.style.opacity='.5';
+    var c=p.firstElementChild;if(!c)return;
+    c.getAnimations().forEach(function(a){var k=a.effect&&a.effect.getKeyframes()[0];if(k&&k.transform!==undefined)a.cancel()});
+    c.style.transform='none';
+  });
+},400);
+
+/* c) AUTO LITE MODE: scroll atak raha ho to decorative loops + heavy effects band.
+      Force on:  link ke end me  #lite   (ya ?lite=1)      Force off:  ?lite=0  */
+var lite=false,de=document.documentElement;
+function pauseLoops(root){(root.getAnimations?root:document).getAnimations().forEach(function(a){
+  var t=a.effect&&a.effect.getComputedTiming&&a.effect.getComputedTiming();if(t&&t.iterations===Infinity)a.pause()})}
+function goLite(){
+  if(lite)return;lite=true;de.classList.add('ad-lite');pauseLoops(document);
+  document.addEventListener('animationstart',function(e){if(e.target.getAnimations)pauseLoops(e.target)},true);
+}
+if(!/[?&]lite=0/.test(location.search)){
+  if(location.hash==='#lite'||/[?&]lite=1/.test(location.search))goLite();
+  else{
+    var smp=[],lastT=0,lastY=-1;
+    (function fr(t){
+      var d=t-lastT,y=window.pageYOffset;lastT=t;
+      if(y!==lastY&&lastY>=0&&d>0&&d<600)smp.push(d);      /* sirf scroll hote waqt ke frames */
+      lastY=y;
+      if(smp.length>=8){var q=smp.slice().sort(function(a,b){return a-b}),m=q[q.length>>1];if(m>80||(smp.length>=24&&m>26)){goLite();return}if(smp.length>=24)return}
+      requestAnimationFrame(fr);
+    })(0);
+  }
+}
+})();
+</script>
+
 </body></html>
